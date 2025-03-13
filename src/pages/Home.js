@@ -1,10 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import weddingImage from '../assets/wedding.jpg';
 import djImage from '../assets/dj-party.jpg';
 import corporateImage from '../assets/corporate-event.jpg';
-import heroImage from '../assets/hero.jpg'; // Add a hero image to your assets folder
+import heroImage from '../assets/hero.jpg';
 
 const Home = () => {
+  const navigate = useNavigate(); // Initialize the navigate function
+
   // Testimonials data
   const testimonials = [
     {
@@ -44,6 +47,7 @@ const Home = () => {
           <h1 style={{ fontSize: '3rem', marginBottom: '1rem' }}>Your Dream Event Starts Here</h1>
           <p style={{ fontSize: '1.5rem' }}>Host unforgettable weddings, parties, and corporate events.</p>
           <button
+            onClick={() => navigate('/contact')} // Navigate to the Contact page
             style={{
               padding: '1rem 2rem',
               fontSize: '1.2rem',
@@ -61,17 +65,56 @@ const Home = () => {
       {/* Event Highlights Section */}
       <div style={{ padding: '2rem', textAlign: 'center' }}>
         <h2>Our Events</h2>
-        <div style={{ display: 'flex', justifyContent: 'space-around', marginTop: '2rem' }}>
-          <div>
-            <img src={weddingImage} alt="Wedding" style={{ width: '100%', borderRadius: '10px' }} />
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-around',
+            gap: '1rem',
+            flexWrap: 'wrap',
+          }}
+        >
+          {/* Wedding Event */}
+          <div style={{ width: '30%', textAlign: 'center' }}>
+            <img
+              src={weddingImage}
+              alt="Wedding"
+              style={{
+                width: '100%',
+                height: '200px',
+                objectFit: 'cover',
+                borderRadius: '10px',
+              }}
+            />
             <h3>Weddings</h3>
           </div>
-          <div>
-            <img src={djImage} alt="DJ Party" style={{ width: '100%', borderRadius: '10px' }} />
+
+          {/* DJ Party */}
+          <div style={{ width: '30%', textAlign: 'center' }}>
+            <img
+              src={djImage}
+              alt="DJ Party"
+              style={{
+                width: '100%',
+                height: '200px',
+                objectFit: 'cover',
+                borderRadius: '10px',
+              }}
+            />
             <h3>DJ Parties</h3>
           </div>
-          <div>
-            <img src={corporateImage} alt="Corporate Event" style={{ width: '100%', borderRadius: '10px' }} />
+
+          {/* Corporate Event */}
+          <div style={{ width: '30%', textAlign: 'center' }}>
+            <img
+              src={corporateImage}
+              alt="Corporate Event"
+              style={{
+                width: '100%',
+                height: '200px',
+                objectFit: 'cover',
+                borderRadius: '10px',
+              }}
+            />
             <h3>Corporate Events</h3>
           </div>
         </div>
@@ -98,6 +141,7 @@ const Home = () => {
         <h2>Ready to Host Your Event?</h2>
         <p>Contact us today to book your dream event!</p>
         <button
+          onClick={() => navigate('/contact')} // Navigate to the Contact page
           style={{
             padding: '1rem 2rem',
             fontSize: '1.2rem',

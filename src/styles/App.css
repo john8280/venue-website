@@ -34,12 +34,12 @@ nav a:hover {
 
 .page h1 {
   font-size: 2.5rem;
-  color: #333;
+  color: #ffffff;
 }
 
 .page p {
   font-size: 1.2rem;
-  color: #666;
+  color: #bbb9b9;
 }
 
 /* Footer Styles */
@@ -51,4 +51,135 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+  margin-top: auto;
+}
+/* Responsive Styles for Gallery */
+@media (max-width: 768px) {
+  .image-gallery {
+    width: 100%;
+  }
+
+  .react-player {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .mobile-videos {
+    display: block;
+  }
+
+  .desktop-videos {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-videos {
+    display: none;
+  }
+
+  .desktop-videos {
+    display: flex;
+  }
+}
+/* Contact Form Styles */
+.page {
+  padding: 2rem;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+input, textarea, .react-select__control {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 1rem 2rem;
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e6b800;
+}
+/* Responsive Styles for Our Events Section */
+@media (max-width: 768px) {
+  .page {
+    padding: 1rem;
+  }
+
+  .our-events div {
+    width: 100% !important; /* Full width on mobile */
+    margin-bottom: 1rem;
+  }
+
+  .our-events img {
+    height: 150px; /* Smaller height on mobile */
+  }
+}
+/* Hover Effect for Images */
+.our-events img {
+  transition: transform 0.3s ease;
+}
+
+.our-events img:hover {
+  transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+/* Responsive Styles for Services Page */
+@media (max-width: 768px) {
+  .page {
+    padding: 1rem;
+  }
+
+  .services div {
+    width: 100% !important; /* Full width on mobile */
+    margin-bottom: 1rem;
+  }
+
+  .services img {
+    height: 150px; /* Smaller height on mobile */
+  }
+}
+/* Hover Effect for Images */
+.services img {
+  transition: transform 0.3s ease;
+}
+
+.services img:hover {
+  transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+/* Responsive Styles for Services Page */
+@media (max-width: 768px) {
+  .page {
+    padding: 1rem;
+  }
+
+  .services div {
+    width: 100% !important; /* Full width on mobile */
+    margin-bottom: 1rem;
+  }
+
+  .services img {
+    height: 150px; /* Smaller height on mobile */
+  }
+
+  .services p {
+    font-size: 0.9rem; /* Smaller font size for mobile */
+  }
 }
